@@ -1,0 +1,247 @@
+`html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Tank School Club | Business Incubation</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-blue: #0a192f;
+            --accent-gold: #e8b328;
+            --text-white: #ffffff;
+            --text-gray: #ccd601;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-blue);
+            color: var(--text-white);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(10, 25, 47, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-white);
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.8)), 
+url('https://images.unsplash.com/photo-1532456703175-ef6b8d5e6c4a?auto=format&fit=crop&q=80');
+            background-size: cover;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            max-width: 600px;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        /* Grid for Skills */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #162a52;
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-gold);
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b1a46;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7f9cf5;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { padding: 20px; }
+            .nav-links { display: none; } /* Simplified for mobile example */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Shark Tank School Club</div>
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#curriculum">Curriculum</a>
+            <a href="#events">Events</a>
+            <a href="#contact" class="cta-btn">Join the Club</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>BUILD IT.<br>PITCH IT.<br>SOLD IT.</h1>
+        <p>The #1 Student Incubator for Business Management & Finance.</p>
+        <br>
+        <a href="#about" style="text-decoration: none; border: 2px solid var(--text-white); 
+padding: 15px 30px; color: white; font-weight: bold; border-radius: 4px;">Start Your Venture</a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+            <div style="flex: 1; text-align: left;">
+                <h2>The Mission</h2>
+                <p>We believe that the best managers are also great businesspeople. Shark Tank 
+School Club is dedicated to de-mystifying complex financial theories and applying them to 
+real-world school startups.</p>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <!-- Placeholder for an image of the team or a shark tank prop -->
+                <img 
+src="https://images.unsplash.com/photo-1556761118-bae3e9dc4c4d?auto=format&fit=crop&q=80" 
+style="max-width: 500px; border-radius: 10px;" alt="Business Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM SECTION -->
+    <section id="curriculum" style="background-color: #0d1f42;">
+        <h2>Core Competencies</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Financial Modeling</h3>
+                <p>Learn how to build cash flow statements, forecast revenue models, and analyze 
+break-even points for any business idea.</p>
+            </div>
+            <div class="card">
+                <h3>Business Strategy</h3>
+                <p>Dive deep into market research, SWOT analysis, and operational efficiency. Turn 
+a concept into a viable plan.</p>
+            </div>
+            <div class="card">
+                <h3>Pitching & Negotiation</h3>
+                <p>The art of the pitch is lost on too many students. Here we learn to communicate 
+value, negotiate terms, and handle Q&A.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events">
+        <h2>The Annual Challenge</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.5rem; text-align: center;">Every year, we host the "Shark Tank" 
+Final.</p>
+            <br>
+            <p><strong>The Rules:</strong></p>
+            <ul style="color: var(--text-gray); line-height: 2;">
+                <li>Students form teams (Max 3 people).</li>
+                <li>Develop a business plan based on your school's infrastructure.</li>
+                <li><strong>5 Minutes Pitching:</strong> Sell your vision.</li>
+                <li><strong>Panel Q&A:</strong> Be grilled by the Sharks on financial 
+viability.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <h3>Contact Us to Join</h3>
+        <p>Email: club@sharktank-school.edu</p>
+        <p>&copy; 2023 Shark Tank School Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
+
+### 4. How to use this
+
+1.  **Save the file:** Copy the code above into Notepad or VS Code and save it as `index.html`.
+2.  **Images:** The code uses Unsplash placeholders. You should replace these with photos of your students in 
+business attire, or a photo of a slide projector on a whiteboard to make it authentic.
+3.  **Hosting:** Upload this file to a host like GitHub Pages or Netlify (both are free) so you can 
+share the link.
+
+### 5. Bonus Tips for "Shark Tank" Branding
+*   **Badges:** Create a printable certificate style when they join. Give them a "Shark Level" 
+(e.g., Sharkling, Junior Shark, Full Shark).
+*   **The "Ask":** Have the students bring their own business ideas to class. Use the site as a 
+repository where they can post their business pitches anonymously for others to critique.
